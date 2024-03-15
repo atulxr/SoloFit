@@ -8,14 +8,20 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="icon"
+    href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixtry7ovfy2kDrgrjI2X9Rm1OLIwRiXgbKgI4tLsa9j1x1Q2X1Gwx1tQT2BEuR7MziuNRdZiagIPdfr1ajqMrVfEU1JqzOdTgfdR_4z5G5CofYuZf4ztTu9ASro9_szfafZtAHkfASgHoMMXPlsWJqPP-9yoxRJmjaUBWzcTZ4Y9XAFH2MjfDYPet-sKKg/s366/solofit.jpg"
+    type="image/x-icon">
 
 <body>
   <nav>
     <ul>
       <li>
         <a href="#" class="logo">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixtry7ovfy2kDrgrjI2X9Rm1OLIwRiXgbKgI4tLsa9j1x1Q2X1Gwx1tQT2BEuR7MziuNRdZiagIPdfr1ajqMrVfEU1JqzOdTgfdR_4z5G5CofYuZf4ztTu9ASro9_szfafZtAHkfASgHoMMXPlsWJqPP-9yoxRJmjaUBWzcTZ4Y9XAFH2MjfDYPet-sKKg/s366/solofit.jpg" alt="" width="70px" height="50px" />
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixtry7ovfy2kDrgrjI2X9Rm1OLIwRiXgbKgI4tLsa9j1x1Q2X1Gwx1tQT2BEuR7MziuNRdZiagIPdfr1ajqMrVfEU1JqzOdTgfdR_4z5G5CofYuZf4ztTu9ASro9_szfafZtAHkfASgHoMMXPlsWJqPP-9yoxRJmjaUBWzcTZ4Y9XAFH2MjfDYPet-sKKg/s366/solofit.jpg"
+            alt="" width="70px" height="50px" />
           <span class="navigation1" style="font-weight: 800; font-size: x-large;">SoloFit</span></a>
       </li>
 
@@ -60,20 +66,36 @@
         </a></li>
     </ul>
   </nav>
-  <div class="container">
-    <h1>BMI Calculator</h1>
-    <div>
-      <label for="height">Height (cm):</label>
-      <input type="number" id="height" placeholder="Enter height">
+  <div class="bmi">
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <div>
+        <br>
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" placeholder="Enter height">
+      </div>
+      <div>
+        <br>
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" placeholder="Enter weight">
+      </div>
+      <br>
+      <button onclick="calculateBMI()">Calculate BMI</button>
+      <div id="result"></div>
     </div>
-    <div>
-      <label for="weight">Weight (kg):</label>
-      <input type="number" id="weight" placeholder="Enter weight">
-    </div>
-    <button onclick="calculateBMI()">Calculate BMI</button>
-    <div id="result"></div>
   </div>
-  <script src="script.js"></script>
+  <div class="side-column">
+    <img class="profile-img"
+      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5CpWzmMNY167xVsAqln2sa9LIYSQP63Pk2XwVCP-h_lP1KfGxslxhp3WoPH7vqqfDCRiqZ81SLN3o9Ekqv3vBEhfd97AiTwy7Ok002OKovb2KzpCd5FXvbbkM6wE9fhiV6JsZS_o5xRfZwF5Oj7t0vR-GIwrJvHIhm4lGPW-aZfDU_zu-xlfN6k3Jrhh7/s320/naim-ahmed-8BcVHmAHtlw-unsplash.jpg"
+      alt="Profile Picture">
+    <div class="user-details">
+      <h1>John Doe</h1>
+      <p></p>
+      <p>Location: City, Country</p>
+      <p>Joined: January 1, 2020</p>
+      <!-- You can add more user details here -->
+    </div>
+  </div>
 </body>
 
 </html>
