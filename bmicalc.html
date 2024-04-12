@@ -12,8 +12,7 @@
   <!--Font & Icons-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet" />
 
@@ -24,15 +23,6 @@
 </head>
 
 <body>
-
-  <div class="scroll-container">
-    <!-- Content goes here -->
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur sem eu justo iaculis ultricies. Donec
-      fringilla eros ut leo tincidunt, eget scelerisque nunc mattis. Nullam eget mauris risus. Duis commodo fermentum
-      nulla, vitae volutpat elit dictum et.</p>
-    <!-- Add more content as needed -->
-  </div>
-
   <!--Navbar-->
   <header>
     <nav id="navbar">
@@ -49,30 +39,56 @@
     </nav>
   </header>
 
-  <!--About-->
-  <section id="about" class="page page-dark">
-    <h1>ABOUT</h1>
-    <div class="container">
-      <img
-        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixtry7ovfy2kDrgrjI2X9Rm1OLIwRiXgbKgI4tLsa9j1x1Q2X1Gwx1tQT2BEuR7MziuNRdZiagIPdfr1ajqMrVfEU1JqzOdTgfdR_4z5G5CofYuZf4ztTu9ASro9_szfafZtAHkfASgHoMMXPlsWJqPP-9yoxRJmjaUBWzcTZ4Y9XAFH2MjfDYPet-sKKg/s366/solofit.jpg"
-        alt="dumbbel-white" width="100px" style="border-radius: 20px;" />
-      <p style="font-size:x-large; font-weight: 500;">
-        SoloFit helps you to improve your sports experience. Here, you can get informed about your body and your
-        health, determine the most suitable target for you, learn your calorie needs according to your goal, make an
-        exercise plan and see exercise forms accordingly. You can also learn the answers of the most popular questions
-        about fitness and contact us to get more information.
-      </p>
-    </div>
+  <br>
+  <br>
+
+
+  <script>
+    bmiSubmit.addEventListener("click", function (event) {
+  const height = parseFloat(document.getElementById("bmi-height").value) / 100;
+  const weight = parseFloat(document.getElementById("bmi-weight").value);
+  const result = weight / (height * height);
+
+  if (!isNaN(result) && result > 0) {
+    if (result < 18.5)
+      document.getElementById("bmi-result").innerHTML = "YOUR BMI = " + result.toFixed(1) + " (Underweight)";
+    else if (result < 24.9)
+      document.getElementById("bmi-result").innerHTML = "YOUR BMI = " + result.toFixed(1) + " (Normal weight)";
+    else
+      document.getElementById("bmi-result").innerHTML = "YOUR BMI = " + result.toFixed(1) + " (Overweight)";
+  }
+  else {
+    alert("Please enter a valid input!");
+  }
+});
+  </script>
+  <!--BMI Calculator-->
+  <section id="bmi-calculator" class="page page-light">
+    
+    <h1>BODY MASS INDEX (BMI)</h1><br />
+    <p>Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women.
+      Calculate your BMI to determine your goal. </p><br />
     <hr /><br />
-    <ul style="font-size: x-large; font-weight: 500;">
-      <li>Calculate your BMI to determine your goal.</li>
-      <li>Calculate your caloric needs and macros due to your goal.</li>
-      <li>Create a workout program.</li>
-      <li>Learn exercise forms from the exercise guide.</li>
-      <li>Browse FAQ to get informed.</li>
-      <li>Contact us for your questions or suggestions.</li>
-    </ul>
-    <a href="#bmi-calculator" class="btn btn-blue">Get Started</a>
+    <h1>BMI Calculator</h1>
+    <div class="container">
+      <form id="bmi-form">
+        <label for="bmi-height">Your Height:</label><br />
+        <input type="text" id="bmi-height" placeholder="Centimeters" /><br />
+        <label for="bmi-weight">Your Weight:</label><br />
+        <input type="text" id="bmi-weight" placeholder="Kilograms" /><br /><br />
+        <span id="bmi-submit" class="btn btn-blue">Submit</span>
+      </form>
+
+      <div class="list-box">
+        <h4 id="bmi-result">YOUR BMI = [Not Entered]</h4><br />
+        <h3>BMI Categories:</h3>
+        <ul>
+          <li>Underweight: BMI &lt; 18.5 (Gain weight)</li>
+          <li>Normal weight: 18.5 &lt; BMI &lt; 24.9 (Maintain)</li>
+          <li>Overweight: BMI &gt; 24.9 (Loss weight)</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <!--Contact-->
@@ -92,7 +108,7 @@
     2024 | Designed and developed By ©SoloFit Team
     <br>
     <br>
-  </footer>
+  </footer> 
 
   <!--Script-->
   <script src="app.js"></script>
