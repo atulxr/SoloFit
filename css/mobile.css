@@ -1,0 +1,120 @@
+/* mobile.css */
+
+#navbar {
+    flex-direction: column;
+    background: #171433;
+}
+
+#navbar ul li a {
+    font-size: 0.6em;
+    padding: 0.12rem 0.12rem 0 0.12rem;
+    margin: 0.16rem;
+}
+
+#navbar a h2 {
+    margin-top: 0.25rem;
+}
+
+form {
+    width: 90%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column; /* Added to align with global CSS */
+}
+
+.list-box {
+    text-align: left;
+    width: 90%;
+    background: #191a1d; /* Added background color to match global CSS */
+    padding: 0.5rem 2rem; /* Adjusted padding to match global CSS */
+    border-radius: 32px; /* Adjusted border-radius to match global CSS */
+    box-shadow: 0 0 3px #000000; /* Added box-shadow to match global CSS */
+}
+
+#about h1 {
+    color: #171717; /* Adjusted color to match global CSS */
+    margin: 2rem auto 1rem auto; /* Adjusted margin to match global CSS */
+}
+
+#exercise-pic {
+    height: 240px;
+}
+
+table,
+thead,
+tbody,
+th,
+td,
+tr {
+    display: block;
+}
+
+#exercise-guide img {
+    height: 180px;
+}
+
+thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+tr {
+    border: 1px solid #ccc;
+}
+
+td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+}
+
+td:before {
+    position: absolute;
+    top: 0px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+td:nth-of-type(1):before {
+    content: "Name";
+}
+
+td:nth-of-type(2):before {
+    content: "Days/Week";
+}
+
+td:nth-of-type(3):before {
+    content: "Monday";
+}
+
+td:nth-of-type(4):before {
+    content: "Tuesday";
+}
+
+td:nth-of-type(5):before {
+    content: "Wednesday";
+}
+
+td:nth-of-type(6):before {
+    content: "Thursday";
+}
+
+td:nth-of-type(7):before {
+    content: "Friday";
+}
+
+td:nth-of-type(8):before {
+    content: "Saturday";
+}
+
+tr:nth-of-type(even) {
+    background-color: rgba(256, 256, 256, 0.1);
+}
